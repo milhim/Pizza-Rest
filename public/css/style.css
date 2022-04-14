@@ -1,0 +1,77 @@
+:root {
+    --links-color: #FFA400;
+    --hover-color: #202020;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th
+ {
+    font-family: 'Chewy', sans-serif;
+    color: var(--hover-color);
+
+}
+
+.back-ground-dark{
+
+    background-color: var(--hover-color) !important;
+}
+.btn{
+    background-color: var(--links-color);
+    color: var(--hover-color);
+    border: none;
+    font-family: 'Chewy', sans-serif;
+}
+.btn:hover,.btn:focus{
+    background-color: var(--hover-color);
+    color: var(--links-color);
+}
+/* start navbar */
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-brand,
+.dropdown a,
+.nav-link
+  {
+    font-family: 'Chewy', sans-serif;
+    font-size: 18px;
+    color: var(--links-color);
+}
+
+ .nav-link:focus,
+ .nav-link:hover,
+ .navbar-brand:hover{
+    color: var(--hover-color) !important;
+}
+.navbar-brand{
+    font-size: 36px !important;
+}
+
+.navbar .search{
+    border-left: 1px solid var(--hover-color);
+}
+.navbar .navbar-toggler{
+    font-size: 26px;
+    border-color: var(--links-color);
+}
+.navbar .navbar-toggler:focus{
+   box-shadow: none;
+}
+
+/* end navbar */
+
+/* start slider */
+
+.pizza-name{
+    color: var(--links-color);
+    font-family: 'Chewy',sans-serif;
+}
+
+/* end slider */
