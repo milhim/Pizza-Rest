@@ -8,7 +8,7 @@
             <div id="main" class=" mt-5 carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     @foreach ($pizzas as $pizza)
-                        <div class="carousel-item  {{ $pizza['id'] == 12 ? 'active' : '' }}">
+                        <div class="carousel-item  {{ $pizza['id'] == 14 ? 'active' : '' }}">
                             <a href=""> <img height="450px" src="{{ asset('images/'.$pizza->src) }}" class="d-block w-100"
                                     alt={{ $pizza->info }}></a>
                         </div>
@@ -45,7 +45,7 @@
                         <img src="{{ asset('images/'. $pizza->src) }}" class="figure-img img-fluid rounded" alt="{{ $pizza->description }}" />
                         <figcaption class="figure-caption text-center ">
                             <p class="fs-4 pizza-name m-0"> {{ $pizza->name }}</p>
-                            <p class="fs-5 pizza-description text-black m-0"> {{ $pizza->description }}</p>
+                            <p class="fs-5 pizza-description text-black m-0"> {{ $pizza->info }}</p>
                             <p class="fs-6 pizza-price text-start m-0"> {{ $pizza->price }}</p>
                         </figcaption>
                     </figure>

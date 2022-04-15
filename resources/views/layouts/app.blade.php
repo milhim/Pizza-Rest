@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
-    <title>Post</title>
+    <title>Pizza</title>
 
 </head>
 
@@ -44,7 +44,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-3" href="#gallery">Gallery</a>
+                        <a class="nav-link p-2 p-lg-3" href="{{ route('home') }}#gallery">Gallery</a>
                     </li>
 
                     @guest

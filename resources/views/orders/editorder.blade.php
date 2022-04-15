@@ -4,8 +4,7 @@
 @section('content')
     <section class="intro ">
         <div class="bg-image-vertical h-100" style="background-color: #EFD3E4;
-                                background-image: url('{{ asset($pizza[0]->src) }}');
-                              ">
+                                background-image: url('{{ asset('images/gallery-img5.jpg') }}');">
             <div class="mask d-flex align-items-center h-100">
                 <div class="container">
                     <div class="row justify-content-center">

@@ -34,7 +34,7 @@ class AdminController extends Controller
     {
 
         $orders = Order::get();
-
+        
         return view('admin.orders', ['orders' => $orders]);
     }
 }

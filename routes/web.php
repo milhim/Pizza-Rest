@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\admin\order\OrderController as OrderOrderController;
 use App\Http\Controllers\Admin\Pizza\PizzaController;
+use App\Http\Controllers\admin\user\OrderController as UserOrderController;
+use App\Http\Controllers\admin\user\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -74,9 +77,19 @@ Route::group([
     //pizza CRUD
     Route::get('pizza/add',[PizzaController::class, 'addPizzaPage'])->name('admin.add.pizza');
     Route::post('pizza/add',[PizzaController::class, 'addPizza'])->name('admin.add.pizza');
-
-
-
+    Route::get('pizza/{pizza}/update',[PizzaController::class, 'updatePizzaPage'])->name('admin.update.pizza');
+    Route::put('pizza/{pizza}/update',[PizzaController::class, 'updatePizza'])->name('admin.update.pizza');
+    Route::delete('pizza/{pizza}/update',[PizzaController::class, 'deletePizza'])->name('admin.delete.pizza');
+    //Users CRUD
+    Route::get('users/{user}',[UserController::class, 'userDetails'])->name('admin.user');
+    Route::get('users/{user}/update',[UserController::class, 'updateUserPage'])->name('admin.update.user');
+    Route::put('users/{user}/update',[UserController::class, 'updateUser'])->name('admin.update.user');
+    Route::delete('users/{user}/delete',[UserController::class, 'deleteUser'])->name('admin.delete.user');
+    //Orders CRUD
+    Route::get('users/{user}/{order}',[OrderOrderController::class, 'orderDetiles'])->name('admin.order.details');
+    Route::get('users/{user}/{order}/update',[OrderOrderController::class, 'orderUpdatePage'])->name('admin.order.update');
+    Route::put('users/{user}/{order}/update',[OrderOrderController::class, 'orderUpdate'])->name('admin.order.update');
+    Route::delete('users/{user}/{order}/delete',[OrderOrderController::class, 'orderDelete'])->name('admin.order.delete');
 
 
 });
